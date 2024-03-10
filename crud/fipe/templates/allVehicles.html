@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiculos Salvos</title>
+</head>
+<body>
+    <h1>Veiculos Salvos</h1>
+
+    <ul>
+        {% for vehicle in vehicles %}
+            <li><a href="{% url 'getVehicle' vehicle.codeFipe %}"> {{vehicle.model}} </a></li>
+        {% endfor %}
+    </ul>
+
+    <button><a href="{% url 'index' %}">Inicio</a></button>
+    
+</body>
+</html>

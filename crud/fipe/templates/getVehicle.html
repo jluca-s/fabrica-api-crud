@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Veiculo Salvo</title>
+</head>
+<body>
+    <h1>Detalhes do {{ vehicle.model }}</h1>
+    <p>Marca: {{ vehicle.brand }} </p>
+    <p>Modelo: {{ vehicle.model }} </p>
+    <p>Ano: {{ vehicle.modelYear }} </p>
+    <p>Combustivel: {{ vehicle.fuel }} </p>
+    <p>Codigo: {{ vehicle.codeFipe }} </p>
+    <p>Tipo: {{ vehicle.vehicleType }} </p>
+    <p>Tipo do Combustivel: {{ vehicle.fuelType }} </p>
+
+    <button><a href="{% url 'deleteVehicle' vehicle.codeFipe %}">Deletar</a></button>
+
+    <button><a href="{% url 'updateVehicleForm' vehicle.codeFipe %}">Atualizar</a></button>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Brands</title>
+</head>
+<body>
+    <h1>Marcas</h1>
+    {% for brand in allBrands %}
+        <p><a href="{% url 'allModels' brandCode=brand.codigo %}">{{ brand.nome }}</a></p>
+    {% endfor %}
+</body>
+</html>

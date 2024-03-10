@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Monte sua Coleção de carros</h1>
+    <h2>Consumindo a API da Tabela Fipe</h2>
+
+    <p>Opções disponiveis:</p>
+
+    <ul>
+        <li><a href="{% url 'allBrands' %}">Buscar todos os carros da api por marca</a></li>
+        <li>
+            <form action="{% url 'apiModelsRedirect' %}" method="get">
+                <label for="brandCode">Buscar modelosda api por id da marca</label>
+                <input type="text" id="brandCode" name="brandCode" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </li>
+        <li><a href="{% url 'allVehicles' %}">Buscar carros salvos no banco de dados</a></li>
+        
+    </ul>
+
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fipe</title>
+</head>
+<body>
+    <h1>Fipe</h1>
+    <p>Valor: {{ fipeData.Valor }} </p>
+    <p>Marca: {{ fipeData.Marca }} </p>
+    <p>Modelo: {{ fipeData.Modelo }} </p>
+    <p>Ano: {{ fipeData.AnoModelo }} </p>
+    <p>Combustivel: {{ fipeData.Combustivel }} </p>
+    <p>CodigoFipe: {{ fipeData.CodigoFipe }} </p>
+    <p>Tipo de Veiculo: {{ fipeData.TipoVeiculo }} </p>
+    <p>Tipo de Combustivel: {{ fipeData.SiglaCombustivel }} </p>
+
+    <form action="{% url 'CreateOrUpdateVehicle' %}" method="post">
+
+        {% csrf_token %}
+
+        <input type="hidden" name="price" value="{{ fipeData.Valor }}">
+        <input type="hidden" name="brand" value="{{ fipeData.Marca }}">
+        <input type="hidden" name="model" value="{{ fipeData.Modelo }}">
+        <input type="hidden" name="modelYear" value="{{ fipeData.AnoModelo }}">
+        <input type="hidden" name="fuel" value="{{ fipeData.Combustivel }}">
+        <input type="hidden" name="codeFipe" value="{{ fipeData.CodigoFipe }}">
+        <input type="hidden" name="vehicleType" value="{{ fipeData.TipoVeiculo }}">
+        <input type="hidden" name="fuelType" value="{{ fipeData.SiglaCombustivel }}">
+
+        <button type="submit">Salvar veiculo</button>
+    </form>
+</body>
+</html>
