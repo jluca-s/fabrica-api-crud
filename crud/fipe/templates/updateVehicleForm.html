@@ -10,12 +10,12 @@
     <form action="{% url 'updateVehicle' vehicle.codeFipe %}" method="post">
         
         {% csrf_token %}
-        <input type="text" name="price" value="{{ vehicle.price }}">
-        <input type="text" name="brand" value="{{ vehicle.brand }}">
-        <input type="text" name="model" value="{{ vehicle.model }}">
-        <input type="text" name="modelYear" value="{{ vehicle.modelYear }}">
-        <input type="text" name="fuel" value="{{ vehicle.fuel }}">
-        <input type="text" name="vehicleType" value="{{ vehicle.vehicleType }}">
+        <input type="text" name="price" value="{{ vehicle.price }}"></br>
+        <input type="text" name="brand" value="{{ vehicle.brand }}"></br>
+        <input type="text" name="model" value="{{ vehicle.model }}"></br>
+        <input type="text" name="modelYear" value="{{ vehicle.modelYear }}"></br>
+        <input type="text" name="fuel" value="{{ vehicle.fuel }}"></br>
+        <input type="text" name="vehicleType" value="{{ vehicle.vehicleType }}"></br>
         <input type="text" name="fuelType" value="{{ vehicle.fuelType }}">
 
         <button type="submit">Salvar</button>
